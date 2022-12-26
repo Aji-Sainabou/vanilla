@@ -13,7 +13,7 @@ body {
   padding: 5px;
   width: 100%;
   max-width: 600px;
-  background-color: white;
+  background-color: rgb(228, 219, 219);
 }
 .card1 {
   border-radius: 10px 10px 0 0;
