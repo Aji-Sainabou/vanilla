@@ -29,6 +29,8 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#current-time");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemp = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
@@ -54,11 +56,35 @@ function handleSubmit(event) {
   let cityInput = document.querySelector("#search-city");
   search(cityInput.value);
 }
+function displayFahrTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  //add the active class
+  fahr.classList.add("active");
+  celsius.classList.remove("active");
+  let fahrTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrTemp);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  celsius.classList.add("active");
+  fahr.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
 
-search("Banjul");
+let celsiusTemp = null;
+
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
 
+let fahr = document.querySelector("#fahr-temp");
+fahr.addEventListener("click", displayFahrTemperature);
+
+let celsius = document.querySelector("#celsius-temp");
+celsius.addEventListener("click", displayCelsiusTemperature);
+
+search("Banjul");
 /*function formatDate(date) {
   let hours = date.getHours();
   
