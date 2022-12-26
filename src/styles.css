@@ -65,6 +65,15 @@ h1 {
   font-size: 20px;
   border-radius: 10px;
   margin-bottom: 8px;
+  background-color: #9cd3d3;
+  border: 2px solid #9cd3d3;
+}
+.btn:hover {
+  background-color: #53a8b6;
+  border: 2px solid #53a8b6;
+  cursor: pointer;
+}
+.btn:active {
   background-color: #53a8b6;
 }
 #button {
@@ -73,6 +82,7 @@ h1 {
 .city-input {
   padding: 11px 8px 7px;
   font-size: 15px;
+  border: 2px solid #9cd3d3;
   border-radius: 10px;
   background-color: #9cd3d3;
 }
@@ -83,4 +93,12 @@ h1 {
 }
 .footer a {
   color: rgb(40, 17, 133);
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #9cd3d3;
+}
+a:hover {
+  color: #53a8b6;
 }
