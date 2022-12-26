@@ -56,6 +56,9 @@ h1 {
   font-weight: bold;
   vertical-align: middle;
 }
+h3 {
+  text-transform: capitalize;
+}
 .currentTemp {
   margin: 0;
   padding: 0;

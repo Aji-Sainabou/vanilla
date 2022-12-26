@@ -1,4 +1,21 @@
-function formatDate(date) {
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temp");
+  let cityElement = document.querySelector("#city");
+  let description = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  console.log(response);
+}
+let apiKey = "a89397bbee39ef0cd278072307619f0b";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Banjul&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(displayTemperature);
+/*function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -83,4 +100,4 @@ searchForm.addEventListener("click", handleSubmit);
 let currentLocationButton = document.querySelector("#button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("New York");*/

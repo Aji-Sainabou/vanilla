@@ -22,7 +22,7 @@
             type="text"
             placeholder="Enter city"
             class="city-input"
-            id="city"
+            id="search-city"
             autofocus="on"
             autocomplete="off"
           />
@@ -39,7 +39,7 @@
       </div>
       <div class="card2">
         <div class="weatherToday">
-          <h2 id="location">Lisbon</h2>
+          <h2 id="city" class="city"></h2>
 
           <h5 id="current-time">Sunday, 25 Dec - 15h39</h5>
 
@@ -50,9 +50,26 @@
             >
           </ul>
           <img src="images/02n.svg" alt="02n" class="mainIcon" id="icon" />
-          <h1 class="currentTemp" id="temp">13°</h1>
-
-          <h3 id="description">few clouds</h3>
+          <h1 class="currentTemp" id="temp"></h1>৹</h1>
+           <h3 id="description"></h3>
+<div class="row Others" id="others">
+            <div class="col-5 humidity">
+              Humidity
+              <br />
+              <strong
+                ><span class="humidity-value" id="humidity"></span> %</strong
+              >
+            </div>
+            <div class="col-5 wind">
+              Wind
+              <br />
+              <strong>
+                <span class="wind-value" id="wind">3</span>
+                <span class="windUnits" id="windUnits">m/s</span>
+              </strong>
+            </div>
+          </div>
+         
           <div class="row forecastHour" id="forecastHour">
             <div class="row">
               <div class="col-2">
@@ -123,23 +140,7 @@
               </div>
             </div>
           </div>
-          <div class="row Others" id="others">
-            <div class="col-5 humidity">
-              Humidity
-              <br />
-              <strong
-                ><span class="humidity-value" id="humidity">68</span> %</strong
-              >
-            </div>
-            <div class="col-5 wind">
-              Wind
-              <br />
-              <strong>
-                <span class="wind-value" id="wind-value">3</span>
-                <span class="windUnits" id="windUnits">m/s</span>
-              </strong>
-            </div>
-          </div>
+          
           <p></p>
         </div>
       </div>
