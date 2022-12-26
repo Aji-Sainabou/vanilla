@@ -1,6 +1,6 @@
 body {
   display: block;
-  color: white;
+
   text-align: center;
 }
 h1 {
@@ -50,13 +50,9 @@ p {
   width: 80px;
   margin-top: 0;
 }
-.footer {
-  font-size: 15px;
-}
+
 .container {
   width: 600px;
-  background-image: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60);
-  background-repeat: no-repeat;
-  background-size: cover;
+
   max-height: 800px;
 }

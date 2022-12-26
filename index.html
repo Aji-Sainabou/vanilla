@@ -16,74 +16,248 @@
   </head>
   <body>
     <div class="container">
-      <input
-        type="text"
-        placeholder="Enter city"
-        class="city-input"
-        id="city"
-        autofocus="on"
-        autocomplete="off"
-      />
-      <input
-        type="submit"
-        value="Search"
-        class="form-control btn btn-primary shadow-sm"
-        id="search-button"
-      />
-      <button type="button" class="btn btn-success" id="button">current</button>
-
-      <h2 id="city-name">New York</h2>
-      <ul>
-        <li id="date"></li>
-        <li id="description"></li>
-      </ul>
-      <h2 id="main-temp">19°C</h2>
-
-      <ul>
-        <li>Humidity: <span id="humidity"></span>%</li>
-        <li>Wind: <span id="wind"></span> km/h</li>
-      </ul>
-      <div class="row">
-        <div class="col">
-          Now <br />
-          ❄️<br />
-          -4°
+      <div class="container-wrapper">
+        <div class="card-1">
+          <form class="searchBar" id="searchForm">
+            <input
+              type="text"
+              placeholder="Enter city"
+              class="city-input"
+              id="city"
+              autofocus="on"
+              autocomplete="off"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary shadow-sm"
+              id="search-button"
+            />
+            <button type="button" class="btn btn-success" id="button">
+              current
+            </button>
+          </form>
         </div>
-        <div class="col">10pm <br />☁️<br />-4°</div>
-        <div class="col">12am <br />🌧️<br />-3°</div>
-        <div class="col">2am <br />🍃 <br />-2°</div>
-        <div class="col">
-          4am <br />
-          🌦️ <br />0°
+        <div class="card2">
+          <div class="weatherToday">
+            <br />
+
+            <h2 id="location">Lisbon</h2>
+
+            <h5 id="current-time">Sunday, 25 Dec - 15h39</h5>
+
+            <ul id="units">
+              <strong
+                ><a href="#" id="celsius-temp" class="active"> ºC </a>️ |
+                <a href="#" id="fahr-temp" class=""> ºF </a></strong
+              >
+            </ul>
+            <img
+              src="images/02n.svg"
+              alt="02n"
+              class="mainIcon"
+              id="icon"
+              width="100px"
+            />
+            <h1 class="currentTemp" id="temp">13</h1>
+            <h1>º</h1>
+            <h3 id="description">few clouds</h3>
+            <div class="row forecastHour" id="forecastHour">
+              <div class="row">
+                <div class="col-2">
+                  <div class="forecast-hour">20h</div>
+                  <img
+                    src="images/03n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">13</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+                <div class="col-2">
+                  <div class="forecast-hour">21h</div>
+                  <img
+                    src="images/03n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">13</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+                <div class="col-2">
+                  <div class="forecast-hour">22h</div>
+                  <img
+                    src="images/03n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">13</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+                <div class="col-2">
+                  <div class="forecast-hour">23h</div>
+                  <img
+                    src="images/03n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">13</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+                <div class="col-2">
+                  <div class="forecast-hour">00h</div>
+                  <img
+                    src="images/03n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">12</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+                <div class="col-2">
+                  <div class="forecast-hour">01h</div>
+                  <img
+                    src="images/10n.svg"
+                    alt="weather-icon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <span class="forecast-temperatures" id="forecastTemp">12</span
+                  ><span class="forecast-temperature">º</span>
+                </div>
+              </div>
+            </div>
+            <div class="row Others" id="others">
+              <div class="col-5 humidity">
+                Humidity
+                <br />
+                <strong
+                  ><span class="humidity-value" id="humidity">68</span>
+                  %</strong
+                >
+              </div>
+              <div class="col-5 wind">
+                Wind
+                <br />
+                <strong>
+                  <span class="wind-value" id="wind-value">3</span>
+                  <span class="windUnits" id="windUnits">m/s</span>
+                </strong>
+              </div>
+            </div>
+            <p></p>
+          </div>
         </div>
-        <div class="col">
-          6am <br />
-          ⛈️ <br />1°
+        <div class="card3">
+          <div class="forecastWeek" id="forecastWeek">
+            <div class="row">
+              <div class="col-2">
+                <div class="forecast-date">Tue</div>
+                <img
+                  src="images/02d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 12</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 17</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-date">Wed</div>
+                <img
+                  src="images/10d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 12</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 17</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-date">Thu</div>
+                <img
+                  src="images/10d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 14</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 16</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-date">Fri</div>
+                <img
+                  src="images/10d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 16</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 17</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-date">Sat</div>
+                <img
+                  src="images/10d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 16</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 18</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-date">Sun</div>
+                <img
+                  src="images/04d.svg"
+                  alt="weather-icon"
+                  class="icon"
+                  id="icon"
+                />
+                <div class="forecast-temperature">
+                  <span class="minTemperature" id="forecastTemp"> 15</span
+                  ><span class="minTemperatures">º </span>
+                  <span class="maxTemperature" id="forecastTemp"> 18</span
+                  ><span class="maxTemperatures">º </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="forcast">
-        <p>
-          Today <span class="emojis">❄️❄️❄️</span>
-          <span class="temperature">-5° -2°</span>
-        </p>
-        <p>
-          Friday <span class="emojis">🍃🍃🍃</span>
-          <span class="temperature">-4° -3°</span>
-        </p>
-        <p>
-          Saturday<span class="emojis">☀️☀️☀️</span
-          ><span class="temperature">0° 3° </span>
-        </p>
-      </div>
-
-      <p class="footer">
-        <a href="https://github.com/Aji-Sainabou/vanilla" target="_blank"
-          >Open source coded</a
-        >
-        by Aji sainabou Njie
-      </p>
     </div>
+    <small class="footer">
+      <a href="https://github.com/Aji-Sainabou/vanilla" target="_blank"
+        >Open source coded</a
+      >
+      by Aji sainabou Njie
+    </small>
+
     <script src="src/index.js"></script>
   </body>
 </html>
