@@ -59,6 +59,10 @@ h1 {
 h3 {
   text-transform: capitalize;
 }
+h5 {
+  font-weight: 100;
+  font-size: 12px;
+}
 .currentTemp {
   margin: 0;
   padding: 0;
