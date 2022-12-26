@@ -1,58 +1,86 @@
 body {
   display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+.card1,
+.card2,
+.card3 {
+  display: block;
+  margin: 3px auto;
+  padding: 5px;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+}
+.card1 {
+  border-radius: 10px 10px 0 0;
+}
+.card3 {
+  border-radius: 0 0 10px 10px;
+}
+#location {
+  top: 0;
+}
+.humidity {
+  background-color: #9cd3d3;
+  margin: auto;
+  margin-right: 10px;
+  display: block;
+  border: 2px solid #9cd3d3;
+  border-radius: 7px;
 
   text-align: center;
+}
+.wind {
+  background-color: #9cd3d3;
+  margin: auto;
+  margin-left: 10px;
+  display: block;
+  border: 2px solid #9cd3d3;
+  border-radius: 7px;
+
+  text-align: center;
+}
+.mainIcon {
+  display: inline;
+  margin: 0 auto;
+  width: 80px;
+  vertical-align: middle;
 }
 h1 {
-  text-align: center;
-  color: blue;
+  font-size: 50px;
+  display: inline;
+  font-weight: bold;
+  vertical-align: middle;
 }
-h2 {
-  text-align: center;
-  color: blue;
-  padding-top: 0px;
-}
-h5 {
-  text-align: center;
-}
-input {
-  align-items: center;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-p {
-  font-size: 20px;
-  margin: 2px;
-  padding: 20px 0;
-}
-.col {
-  font-size: 15px;
-  width: 100%;
-}
-
-.temperature {
-  padding-left: 100px;
+.currentTemp {
+  margin: 0;
+  padding: 0;
 }
 .btn {
-  padding: 4px;
+  padding: 5px;
   font-size: 20px;
   border-radius: 10px;
   margin-bottom: 8px;
+  background-color: #53a8b6;
 }
-.search {
-  padding: 5px;
+#button {
+  padding: 6px;
+}
+.city-input {
+  padding: 11px 8px 7px;
   font-size: 15px;
   border-radius: 10px;
+  background-color: #9cd3d3;
 }
 #search-button {
   width: 80px;
   margin-top: 0;
+  padding: 6px;
 }
-
-.container {
-  width: 600px;
-
-  max-height: 800px;
+.footer a {
+  color: rgb(40, 17, 133);
 }
