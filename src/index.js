@@ -20,6 +20,37 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function diplayForcast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col">
+    <div class="forecast-date">${day}</div>
+    <img src="images/02d.svg" alt="weather-icon" class="icon" id="icon" />
+    <div class="forecast-temperature">
+      <span class="minTemperature" id="forecastTemp">
+        
+        12
+      </span>
+      <span class="minTemperatures">º </span>
+      <span class="maxTemperature" id="forecastTemp">
+        
+        17
+      </span>
+      <span class="maxTemperatures">º </span>
+    </div>
+    </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `<div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city");
@@ -85,6 +116,7 @@ let celsius = document.querySelector("#celsius-temp");
 celsius.addEventListener("click", displayCelsiusTemperature);
 
 search("Banjul");
+diplayForcast();
 /*function formatDate(date) {
   let hours = date.getHours();
   

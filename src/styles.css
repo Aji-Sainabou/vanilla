@@ -17,6 +17,7 @@ body {
 }
 .card1 {
   border-radius: 10px 10px 0 0;
+  margin-top: 80px;
 }
 .card3 {
   border-radius: 0 0 10px 10px;
