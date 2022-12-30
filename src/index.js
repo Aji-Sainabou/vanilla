@@ -127,7 +127,6 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-function updatelocation
 
 let celsiusTemperature = null;
 
